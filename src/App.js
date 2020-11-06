@@ -40,7 +40,7 @@ export const App = ({ toggleLoader }) => {
 const MainLayout = styled.div`
   ${tw`flex flex-col w-full h-screen bg-theme-secondary text-theme-primary`}
   > * {
-    ${tw`px-8! md:px-24!`}
+    ${tw`px-8! md:px-24! xl:px-64!`}
   }
 `;
 const Header = styled.div`
