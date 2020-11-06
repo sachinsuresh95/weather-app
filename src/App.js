@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import tw, { styled } from "twin.macro";
 
-import { getWeatherDataById } from "./api";
+import api from "./api";
 import CitiesList from "./CitiesList";
 import Select from "./components/Select";
 import WeatherReport from "./components/WeatherReport";
 import withLoader from "./components/Loader";
 import Forecast from "./components/Forecast";
 
-const App = ({ toggleLoader }) => {
+export const App = ({ toggleLoader }) => {
   const [currentCity, setCurrentCity] = useState(CitiesList[0]);
   const [weather, setWeather] = useState({});
 
   useEffect(() => {
     toggleLoader(true);
-    getWeatherDataById(currentCity.id).then((res) => {
+    api.getWeatherDataById(currentCity.id).then((res) => {
       setWeather(res.data);
       toggleLoader(false);
     });
