@@ -18,6 +18,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
+    "serve": "^11.3.2",
     "styled-components": "^5.2.1",
     "tailwindcss": "^1.9.6",
     "twin.macro": "^1.12.0",
@@ -30,6 +31,8 @@
     "dev": "run-p watch:tailwind start",
     "build": "react-scripts build",
     "build:prod": "NODE_ENV=production npm run build",
+    "start:prod": "run-s build:prod serve",
+    "serve": "npx serve build",
     "prebuild": "npm run build:tailwind",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
