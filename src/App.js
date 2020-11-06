@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import tw, { styled } from 'twin.macro';
+import { useEffect, useState } from "react";
+import tw, { styled } from "twin.macro";
 
-import { getWeatherDataById } from './api';
-import CitiesList from './CitiesList';
-import Select from './components/Select';
-import WeatherReport from './components/WeatherReport';
-import withLoader from './components/Loader';
-import Forecast from './components/Forecast';
+import { getWeatherDataById } from "./api";
+import CitiesList from "./CitiesList";
+import Select from "./components/Select";
+import WeatherReport from "./components/WeatherReport";
+import withLoader from "./components/Loader";
+import Forecast from "./components/Forecast";
 
 const App = ({ toggleLoader }) => {
   const [currentCity, setCurrentCity] = useState(CitiesList[0]);
@@ -14,7 +14,7 @@ const App = ({ toggleLoader }) => {
 
   useEffect(() => {
     toggleLoader(true);
-    getWeatherDataById(currentCity.id).then(res => {
+    getWeatherDataById(currentCity.id).then((res) => {
       setWeather(res.data);
       toggleLoader(false);
     });
@@ -25,7 +25,7 @@ const App = ({ toggleLoader }) => {
       <Header>Weather App</Header>
       <Content>
         <Select
-          label={'Select City'}
+          label={"Select City"}
           options={CitiesList}
           current={currentCity.id}
           onChange={setCurrentCity}

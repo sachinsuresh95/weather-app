@@ -1,14 +1,14 @@
-import tw, { styled } from 'twin.macro';
+import tw, { styled } from "twin.macro";
 
 const Select = ({ label, options, onChange, current }) => {
-  const setSelectedVaue = e =>
-    onChange(options.find(o => o.id === e.target.value));
+  const setSelectedVaue = (e) =>
+    onChange(options.find((o) => o.id === e.target.value));
 
   return (
     <StyledLabel>
       {label}
       <StyledSelect value={current} onChange={setSelectedVaue}>
-        {options.map(o => (
+        {options.map((o) => (
           <option value={o.id} key={o.id}>
             {o.name}
           </option>
