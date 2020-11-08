@@ -14,3 +14,6 @@ Write better unit tests
 Adapt better on larger screens - looks a bit stretched now
 
 Improve layout to show more information without cluttering 
+
+# NOTE - issue in windows:
+Use command ```build:prod:windows``` instaed of ```build:prod``` on Windows machines. 
