@@ -16,4 +16,5 @@ Adapt better on larger screens - looks a bit stretched now
 Improve layout to show more information without cluttering 
 
 # NOTE - issue in windows:
-Use command ```build:prod:windows``` instaed of ```build:prod``` on Windows machines. 
+Use command ```build:prod:windows``` instead of ```build:prod``` on Windows machines. 
+Use command ```start:prod:windows``` instead of ```start:prod``` on Windows machines.
