@@ -33,6 +33,7 @@
     "build:prod": "NODE_ENV=production npm run build",
     "build:prod:windows": "set NODE_ENV=production&& npm run build",
     "start:prod": "run-s build:prod serve",
+    "start:prod:windows": "run-s build:prod:windows serve",
     "serve": "npx serve build",
     "prebuild": "npm run build:tailwind",
     "test": "react-scripts test",
